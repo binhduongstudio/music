@@ -2,7 +2,7 @@ const customers = [
   {
     id: "thanhsang",
     name: "Thanh Sáng",
-    avatar: "avatar/thanhsang.png",
+    avatar: "logo.png",
 
     songs: [
       {
@@ -11,10 +11,10 @@ const customers = [
         priority: 99,
 
         listenLink:
-          "https://dl.ithcm.vn/TEMP/50%20NAM%20VE%20SAU%20-%20MASTER.wav",
+          "",
 
         downloadLink:
-          "https://ol.ithcm.vn/@s/50namvesau"
+          ""
       }
     ]
   },
@@ -51,10 +51,10 @@ const customers = [
         priority: 2,
 
         listenLink:
-          "https://raw.githubusercontent.com/dinhtuan60music-cmd/anhtuanstudio/3ffd1e6ddecc65d51df8c812701802a1ae12a622/files/TRAI%20TIM%20KHAT%20MONG%20-%20MASTER%202.mp3",
+          "",
 
         downloadLink:
-          "https://github.com/dinhtuan60music-cmd/anhtuanstudio/raw/3ffd1e6ddecc65d51df8c812701802a1ae12a622/files/TRAI%20TIM%20KHAT%20MONG%20-%20MASTER%202.mp3"
+          ""
       }
     ]
   },
