@@ -43,7 +43,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   background:
     radial-gradient(
       circle at 20% 18%,
@@ -132,15 +132,30 @@ input {
 }
 
 .brand span {
-  font-size: 18px;
-  font-weight: 600;
 
-  background: linear-gradient(
-    180deg,
-    #ffffff,
-    #ddd0ff,
-    #b889ff
-  );
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #ddd0ff,
+        #b889ff
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 0 8px rgba(140,90,255,.15);
+
+}
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1433,6 +1448,16 @@ footer {
     font-size: 10.8px;
   }
 }
+
+/* Tiêu đề toàn website */
+
+h1,
+h2,
+h3 {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 700;
+}
+
 
 /* Tôn trọng cài đặt giảm chuyển động */
 
