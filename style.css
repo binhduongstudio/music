@@ -1,7 +1,7 @@
 /* =========================================================
    BINH DUONG STUDIO - STYLE.CSS HOÀN CHỈNH
    Phong cách: đỏ đen sang trọng, ánh kim loại, hiện đại
-   Ảnh máy tính và điện thoại: background.jpg
+   Ảnh máy tính và điện thoại: background.png
 ========================================================= */
 
 :root {
@@ -232,7 +232,7 @@ input {
       rgba(3, 2, 2, 0.18) 62%,
       rgba(3, 2, 2, 0.74)
     ),
-    url("background.jpg") center center / cover no-repeat;
+    url("background.png") center center / cover no-repeat;
   filter: saturate(1.03) contrast(1.03);
 }
 
@@ -904,7 +904,7 @@ input {
       rgba(7, 4, 11, 0.30),
       rgba(7, 4, 11, 0.78)
     ),
-    url("background.jpg") center center / cover no-repeat;
+    url("background.png") center center / cover no-repeat;
 }
 
 .customer-page-overlay {
@@ -1276,7 +1276,7 @@ h3 {
         rgba(6, 4, 10, 0.34),
         rgba(6, 4, 10, 0.72)
       ),
-      url("background.jpg") 52% center / cover no-repeat;
+      url("background.png") 52% center / cover no-repeat;
   }
 
   .hero-content,
@@ -1351,7 +1351,7 @@ h3 {
         rgba(6, 4, 10, 0.46),
         rgba(6, 4, 10, 0.90)
       ),
-      url("background.jpg") center center / cover no-repeat;
+      url("background.png") center center / cover no-repeat;
   }
 
   .customer-profile {
