@@ -78,13 +78,15 @@
     }
 
     .brand img{
-      width:40px;
-      height:40px;
-      object-fit:contain;
-      filter:
-        drop-shadow(0 0 9px rgba(215,25,32,.25))
-        drop-shadow(0 0 18px rgba(115,7,11,.18));
-    }
+    width:40px;
+    height:40px;
+    object-fit:contain;
+
+    background:transparent;
+
+    filter:
+      drop-shadow(0 0 9px rgba(215,25,32,.25));
+}
 
     .brand span{
       font-family:"Be Vietnam Pro",sans-serif;
@@ -295,27 +297,30 @@
       to{transform:translateX(-50%) rotate(360deg)}
     }
 
-    .cover-logo{
-      position:absolute;
-      top:184px;
-      left:50%;
-      z-index:3;
-      width:108px;
-      height:108px;
-      padding:19px;
-      transform:translate(-50%,-50%);
-      object-fit:contain;
-      border:1px solid rgba(255,120,124,.42);
-      border-radius:50%;
-      background:
-        linear-gradient(145deg,rgba(255,255,255,.10),transparent 36%),
-        radial-gradient(circle,#c0141a 0 38%,#75070b 39% 66%,#1b0304 67%);
-      box-shadow:
-        0 0 24px rgba(215,25,32,.27),
-        0 10px 24px rgba(0,0,0,.42),
-        inset 0 1px 0 rgba(255,255,255,.18),
-        inset 0 0 15px rgba(255,84,90,.15);
-    }
+   .cover-logo{
+    position:absolute;
+    top:184px;
+    left:50%;
+    z-index:3;
+
+    width:108px;
+    height:108px;
+
+    padding:0;
+
+    transform:translate(-50%,-50%);
+
+    object-fit:contain;
+
+    background:transparent;
+
+    border:none;
+
+    box-shadow:
+      0 0 25px rgba(215,25,32,.18);
+}
+
+    
 
     .equalizer{
       position:absolute;
