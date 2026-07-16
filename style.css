@@ -154,19 +154,34 @@ input {
 }
 
 .main-nav {
-  display: flex;
-  align-items: center;
-  gap: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 38px;
 }
 
+
 .main-nav a {
-  position: relative;
-  color: #f1eaea;
-  font-size: 14px;
-  transition:
-    color 0.25s ease,
-    text-shadow 0.25s ease;
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    line-height: 1;
+
+    color: #f4eeee;
+
+    white-space: nowrap;
+
+    transition:
+        .25s;
 }
+
 
 .main-nav a::after {
   content: "";
@@ -187,8 +202,9 @@ input {
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: var(--red-light);
-  text-shadow: 0 0 12px rgba(243, 64, 70, 0.24);
+  color: #ff686d;
+  transform: translateY(-1px);
+  text-shadow: 0 0 10px rgba(215, 25, 32, 0.22);
 }
 
 .main-nav a:hover::after,
