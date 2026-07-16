@@ -1,73 +1,1434 @@
-:root{--orange:#ff8418;--orange-light:#ffad55;--orange-dark:#d85f00;--gold:#ffc56f;--black:#050403;--dark:#0b0806;--text:#fff8ee;--muted:#cbb9a7;--border:rgba(255,142,39,.28);--glass:rgba(13,9,6,.76);--shadow:0 20px 60px rgba(0,0,0,.45)}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{min-height:100vh;overflow-x:hidden;color:var(--text);font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 20% 20%,rgba(255,132,24,.07),transparent 32%),radial-gradient(circle at 85% 55%,rgba(255,111,0,.055),transparent 35%),linear-gradient(180deg,#080503 0%,#120b06 45%,#050403 100%)}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,input{font:inherit}.hidden{display:none!important}.container{width:min(1120px,calc(100% - 32px));margin:0 auto}
+/* =========================================================
+   BINH DUONG STUDIO - STYLE.CSS HOÀN CHỈNH
+   Phong cách: tím sang trọng, hiện đại, không hiệu ứng galaxy
+   Ảnh máy tính: background.png
+   Ảnh điện thoại: backgrounddt.png
+========================================================= */
 
-/* HEADER */
-.topbar{position:fixed;inset:0 0 auto;z-index:100;width:100%;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(5,4,3,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}.nav-wrap{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.5px}.brand img{width:48px;height:48px;object-fit:contain;filter:drop-shadow(0 0 14px rgba(255,126,25,.38))}.brand span{color:var(--orange);font-size:18px}.main-nav{display:flex;align-items:center;gap:26px}.main-nav a{color:#f5e9dd;font-size:14px;transition:.25s}.main-nav a:hover,.main-nav a.active{color:var(--orange)}
+:root {
+  --purple: #8b5cf6;
+  --purple-light: #b79cff;
+  --purple-dark: #5b2ea6;
+  --silver-purple: #ddd3ff;
 
-/* HERO TRANG CHỦ */
-.hero,.hero-clean{position:relative;min-height:100vh;overflow:hidden;display:grid;place-items:center;padding:110px 0 58px;
-                  
-                  
-    /* THAY MÀU NỀN */   
-                  
-   background:linear-gradient(90deg,rgba(0,0,0,.18),rgba(0,0,0,.03) 38%,rgba(0,0,0,.03) 62%,rgba(0,0,0,.18)),url("background.png") center/cover no-repeat}
+  --black: #09070d;
+  --dark: #100b18;
+  --dark-soft: #181123;
 
+  --text: #faf8ff;
+  --muted: #c6bdd9;
 
+  --border: rgba(173, 132, 255, 0.30);
+  --border-strong: rgba(190, 155, 255, 0.62);
+  --glass: rgba(19, 13, 29, 0.78);
 
-.hero-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle at 50% 28%,rgba(255,175,70,.12),transparent 38%),linear-gradient(to bottom,rgba(0,0,0,.01),rgba(0,0,0,.08) 72%,rgba(0,0,0,.24))}.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle at 50% 22%,rgba(255,170,55,.12),transparent 18%),radial-gradient(circle at 32% 48%,rgba(255,160,40,.055),transparent 24%),radial-gradient(circle at 68% 48%,rgba(255,160,40,.055),transparent 24%);mix-blend-mode:screen}.hero-content,.hero-content-clean{position:relative;z-index:2;width:100%;min-height:calc(100vh - 168px);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:34px;text-align:center;animation:fadeUp .9s ease both}.hero-logo{width:min(340px,80vw);max-height:250px;margin:0 auto 10px;object-fit:contain;filter:drop-shadow(0 0 18px rgba(255,165,40,.35)) drop-shadow(0 0 40px rgba(255,165,40,.18))}.hero-kicker{margin-bottom:18px;color:var(--gold);font-size:13px;font-weight:700;letter-spacing:5px}.hero h1{margin-bottom:18px;font-size:clamp(40px,6vw,72px);line-height:1.05;text-shadow:0 8px 30px rgba(0,0,0,.72)}.hero-description{max-width:650px;margin:0 auto 30px;color:var(--muted);font-size:clamp(16px,2vw,20px);line-height:1.7}
+  --shadow:
+    0 20px 60px rgba(0, 0, 0, 0.46),
+    0 0 28px rgba(115, 65, 210, 0.10);
+}
 
-/* 4 NÚT TRANG CHỦ */
-.hero-actions,.hero-buttons{display:flex;align-items:center;justify-content:center;flex-wrap:nowrap;gap:18px;width:max-content;max-width:calc(100vw - 40px);padding:14px 16px;
+/* RESET */
 
-          
-  border:1px solid rgba(255,196,130,.28);  /* THAY MÀU VIỀN*/
-                            
-  
-  border-radius:20px;background:rgba(5,4,3,.36);box-shadow:0 16px 45px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}.btn,.btn-primary,.btn-music,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-.hero-buttons .btn,.hero-actions .btn{position:relative;min-width:180px;min-height:54px;padding:0 24px;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;
-                                      
-                                      
-color:#f5e5cf;       /* THAY MÀU CHỮ */
-                                      
-                                      
-border:1px solid rgba(255,184,95,.78);border-radius:14px;
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(
+      circle at 20% 18%,
+      rgba(124, 77, 255, 0.09),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 84% 58%,
+      rgba(171, 123, 255, 0.055),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #0b0711 0%,
+      #130b1d 48%,
+      #08060c 100%
+    );
+}
 
-/* THAY HIỆU ỨNG HOVER */                                      
-background:
-linear-gradient(
-180deg,
-#7d5028,
-#5c3619
-);  
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-                                      
-                                      
-box-shadow:0 10px 25px rgba(255,117,13,.28),inset 0 1px 0 rgba(255,255,255,.34);text-align:center;text-shadow:0 2px 6px rgba(0,0,0,.46);font-size:16px;font-weight:900;letter-spacing:.35px;transition:.24s}.btn::before,.hero-buttons .btn::before,.hero-actions .btn::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 20%,rgba(255,255,255,.22),transparent 66%);pointer-events:none}.btn:hover,.hero-buttons .btn:hover,.hero-actions .btn:hover{transform:translateY(-3px) scale(1.025);background:linear-gradient(180deg,#ffc06d,#ff8a20);box-shadow:0 14px 34px rgba(255,140,40,.48),inset 0 1px 0 rgba(255,255,255,.4)}
+img {
+  display: block;
+  max-width: 100%;
+}
 
-/* PHẦN CHUNG */
-.section{position:relative;overflow:hidden;isolation:isolate;padding:82px 0}.section::before{content:"";position:absolute;z-index:-1;top:-260px;left:50%;width:520px;height:520px;transform:translateX(-50%);pointer-events:none;background:radial-gradient(circle,rgba(255,132,24,.12),rgba(255,132,24,.045) 38%,transparent 70%);filter:blur(8px)}.section::after{content:"";position:absolute;top:0;left:50%;width:min(700px,78%);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(255,151,54,.5),transparent);box-shadow:0 0 18px rgba(255,123,20,.25)}.section-heading{margin-bottom:36px;text-align:center}.section-heading span{display:block;margin-bottom:10px;color:var(--orange);font-size:12px;font-weight:800;letter-spacing:4px}.section-heading h2{font-size:clamp(30px,4vw,46px)}.dark-section{background:radial-gradient(circle at 15% 30%,rgba(255,126,25,.09),transparent 28%),radial-gradient(circle at 85% 70%,rgba(255,159,67,.06),transparent 30%),linear-gradient(145deg,#100a06,#080503 55%,#130b06)}
+button,
+input {
+  font: inherit;
+}
 
-/* DỊCH VỤ */
-.services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.service-card{position:relative;overflow:hidden;padding:30px 22px;border:1px solid rgba(255,255,255,.08);border-radius:20px;text-align:center;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,132,24,.025)),rgba(12,8,5,.74);box-shadow:0 18px 45px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.05);transition:.25s}.service-card:hover{transform:translateY(-6px);border-color:var(--border);box-shadow:var(--shadow)}.service-icon{margin-bottom:15px;font-size:36px}.service-card h3{margin-bottom:10px;color:var(--gold);font-size:21px}.service-card p{color:var(--muted);font-size:14px;line-height:1.65}
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
 
-/* CỔNG KHÁCH HÀNG */
-.customer-section{background:radial-gradient(circle at 50% 0%,rgba(255,132,24,.14),transparent 32%),linear-gradient(180deg,#090604,#120b06 50%,#070403)}.search-box{max-width:650px;margin:-8px auto 18px;padding:7px;border:1px solid var(--border);border-radius:15px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,132,24,.025)),rgba(12,8,5,.78);box-shadow:0 20px 55px rgba(0,0,0,.35);backdrop-filter:blur(16px)}.search-box input{width:100%;min-height:48px;padding:0 14px;border:0;outline:0;color:#fff;background:transparent;font-size:13px}.search-box input::placeholder{color:#bba895;font-size:13px}.customer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.customer-card{position:relative;overflow:hidden;padding:14px;border:1px solid var(--border);border-radius:15px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,132,24,.025)),rgba(12,8,5,.74);box-shadow:0 10px 28px rgba(0,0,0,.18);backdrop-filter:blur(14px);transition:.22s}.customer-card:hover{transform:translateY(-3px);border-color:rgba(255,153,54,.68);box-shadow:0 18px 38px rgba(0,0,0,.28)}.customer-code{margin-bottom:5px;color:var(--orange);font-size:9px;font-weight:800;letter-spacing:1.5px}.customer-card h3{margin-bottom:5px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:16px}.customer-card p{margin-bottom:10px;color:var(--muted);font-size:11px;line-height:1.4}.customer-card a{min-height:32px;padding:0 12px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:9px;color:var(--gold);font-size:10px;font-weight:800}.empty-message{margin-top:18px;color:var(--muted);text-align:center;font-size:12px}.customer-card-clickable{cursor:pointer}.matched-songs{margin-bottom:16px}.matched-label{display:block;margin-bottom:7px;color:#f3e7dc;font-size:13px;font-weight:700}.matched-song-title{margin:0 0 7px;color:#fff;font-size:16px;line-height:1.4}.customer-name{margin-top:8px}.customer-song-total{margin-bottom:18px}.customer-card-footer{margin-top:20px;padding-top:16px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid rgba(255,136,0,.22)}.customer-open-text{color:#ffb347;font-weight:800}.customer-card-arrow{width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(255,136,0,.65);border-radius:50%;color:#ff9a1f;font-size:22px}
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
 
-/* TRANG KHÁCH HÀNG */
-.customer-page{min-height:100vh;background:var(--black)}.customer-hero{position:relative;min-height:430px;padding:130px 0 60px;display:flex;align-items:flex-end;background:linear-gradient(90deg,rgba(0,0,0,.52),rgba(0,0,0,.16),rgba(0,0,0,.52)),url("background.png") center/cover no-repeat}.customer-page-overlay{position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(255,126,25,.08),transparent 35%),linear-gradient(to bottom,rgba(0,0,0,.12),var(--black))}.customer-page-content{position:relative;z-index:2}.back-link{display:inline-block;margin-bottom:28px;color:var(--gold);font-weight:700}.customer-profile{display:flex;align-items:center;gap:24px}.customer-profile img{width:110px;height:110px;object-fit:contain}.customer-page-code{margin-bottom:8px;color:var(--orange);font-size:13px;font-weight:800;letter-spacing:3px}.customer-profile h1{margin-bottom:8px;font-size:clamp(34px,5vw,58px)}.customer-profile p:last-child{color:var(--muted)}.song-section{background:radial-gradient(circle at 50% 0%,rgba(255,126,25,.07),transparent 34%),var(--black)}.song-list{max-width:900px;margin:0 auto;display:grid;gap:15px}.song-card{padding:20px;display:grid;grid-template-columns:68px minmax(0,1fr) auto;align-items:center;gap:18px;border:1px solid var(--border);border-radius:18px;background:var(--glass);backdrop-filter:blur(14px)}.song-number{width:52px;height:52px;display:grid;place-items:center;border:1px solid var(--border);border-radius:14px;color:var(--orange);background:rgba(255,132,24,.08);font-weight:800}.song-info h3{margin-bottom:6px;font-size:19px}.song-info p{color:var(--muted);font-size:14px}.song-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px}.song-listen{min-width:105px;padding:13px 20px;border:1px solid #ff8a1f;border-radius:12px;color:#ff9b3e;background:rgba(255,138,31,.08);font-weight:800}.song-download{padding:12px 18px;border-radius:12px;color:#241000;background:linear-gradient(135deg,#ffa246,#e96800);font-weight:800}.song-player{grid-column:1/-1;width:100%;padding-top:16px}.song-player audio{display:block;width:100%;height:48px}.not-found{max-width:620px;margin:0 auto;padding:34px;border:1px solid var(--border);border-radius:20px;text-align:center;background:var(--glass)}.not-found h2{margin-bottom:12px}.not-found p{margin-bottom:24px;color:var(--muted)}
+/* =========================================================
+   THANH MENU
+========================================================= */
 
-/* FOOTER */
-footer{position:relative;border-top:1px solid rgba(255,147,48,.2);background:radial-gradient(circle at 50% 0%,rgba(255,132,24,.1),transparent 48%),linear-gradient(180deg,#090604,#020201)}.footer-content{min-height:112px;padding:18px 0 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:var(--muted);text-align:center;line-height:1.4}.footer-content p{font-size:12px}.footer-content strong{display:block;margin-bottom:2px;color:#f2e8df;font-size:16px}.footer-content img{order:2;width:34px;height:34px;object-fit:contain}
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  border-bottom: 1px solid rgba(185, 150, 255, 0.15);
+  background: rgba(8, 6, 12, 0.78);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.20);
+}
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.nav-wrap {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
 
-/* TABLET */
-@media(max-width:900px){.main-nav{display:none}.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.customer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-actions,.hero-buttons{gap:12px}
-                        .btn,.hero-buttons .btn,.hero-actions .btn{min-width:150px;padding:0 16px;font-size:14px}}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
 
-/* MOBILE */
-@media(max-width:768px){.container{width:min(100% - 24px,1120px)}.topbar{position:absolute}.nav-wrap{min-height:66px}.brand img{width:42px;height:42px}.brand span{font-size:15px}.hero,.hero-clean{min-height:100svh;padding:88px 0 34px;background:linear-gradient(180deg,rgba(0,0,0,.14),rgba(0,0,0,.26),rgba(0,0,0,.58)),url("backgrounddt.png") center/cover no-repeat}.hero-content,.hero-content-clean{min-height:calc(100svh - 122px);justify-content:flex-end;padding-bottom:0}.hero-actions,.hero-buttons{width:100%;max-width:360px;padding:16px;display:grid;grid-template-columns:1fr;gap:14px}
-                        
-                        .btn,.btn-primary,.btn-music,.hero-buttons .btn,.hero-actions .btn{width:100%;min-width:0;min-height:54px;padding:0 18px;font-size:16px}.section{padding:64px 0}.services-grid,.customer-grid{grid-template-columns:1fr}.customer-hero{min-height:390px;padding-top:105px}.customer-profile{flex-direction:column;align-items:flex-start}.customer-profile img{width:90px;height:90px}.song-card{grid-template-columns:54px minmax(0,1fr)}.song-actions{grid-column:1/-1;width:100%;justify-content:stretch}.song-listen,.song-download{flex:1;min-width:130px;text-align:center}.song-player{padding-top:10px}.footer-content{min-height:96px;padding:15px 0 11px;gap:6px}.footer-content p{font-size:10.5px;line-height:1.35;white-space:nowrap}.footer-content strong{font-size:14px}.footer-content img{width:30px;height:30px}.footer-address{display:block;white-space:nowrap;font-size:11px}}
+.brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 12px rgba(146, 95, 255, 0.30))
+    drop-shadow(0 0 24px rgba(92, 48, 170, 0.18));
+}
+
+.brand span {
+  color: var(--purple-light);
+  font-size: 18px;
+  text-shadow: 0 0 14px rgba(143, 94, 255, 0.20);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.main-nav a {
+  position: relative;
+  color: #eee9f8;
+  font-size: 14px;
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 0;
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--purple-light),
+    transparent
+  );
+  transition: width 0.25s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--purple-light);
+  text-shadow: 0 0 12px rgba(157, 112, 255, 0.24);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+/* =========================================================
+   HERO TRANG CHỦ
+========================================================= */
+
+.hero,
+.hero-clean {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: 110px 0 58px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 3, 8, 0.70),
+      rgba(5, 3, 8, 0.14) 38%,
+      rgba(5, 3, 8, 0.14) 62%,
+      rgba(5, 3, 8, 0.70)
+    ),
+    url("background.png") center center / cover no-repeat;
+  filter: saturate(1.03) contrast(1.03);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 50% 26%,
+      rgba(128, 79, 220, 0.11),
+      transparent 40%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(5, 3, 8, 0.03),
+      rgba(5, 3, 8, 0.12) 70%,
+      rgba(5, 3, 8, 0.38)
+    );
+}
+
+.hero::after,
+.hero-clean::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 50% 24%,
+      rgba(168, 125, 255, 0.10),
+      transparent 19%
+    ),
+    radial-gradient(
+      circle at 30% 48%,
+      rgba(108, 65, 186, 0.045),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 70% 48%,
+      rgba(108, 65, 186, 0.045),
+      transparent 25%
+    );
+}
+
+.hero-content,
+.hero-content-clean {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: calc(100vh - 168px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 34px;
+  text-align: center;
+  animation: fadeUp 0.9s ease both;
+}
+
+.hero-logo {
+  width: min(340px, 80vw);
+  max-height: 250px;
+  margin: 0 auto 10px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 16px rgba(147, 95, 255, 0.28))
+    drop-shadow(0 0 32px rgba(92, 48, 170, 0.16));
+}
+
+.hero-kicker {
+  margin-bottom: 18px;
+  color: var(--purple-light);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.hero h1 {
+  margin-bottom: 18px;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.05;
+  text-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.72),
+    0 0 18px rgba(125, 80, 220, 0.08);
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: var(--muted);
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.7;
+}
+
+/* =========================================================
+   KHUNG NÚT TRANG CHỦ
+========================================================= */
+
+.hero-actions,
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 18px;
+  width: max-content;
+  max-width: calc(100vw - 40px);
+  padding: 14px 16px;
+  border: 1px solid rgba(177, 137, 255, 0.24);
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(125, 76, 219, 0.025)
+    ),
+    rgba(9, 6, 14, 0.50);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.38),
+    0 0 32px rgba(111, 64, 203, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.btn,
+.btn-primary,
+.btn-music,
+.hero-buttons .btn,
+.hero-actions .btn {
+  position: relative;
+  min-width: 180px;
+  min-height: 54px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border: 1px solid rgba(198, 167, 255, 0.68);
+  border-radius: 14px;
+  color: #ffffff;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(139, 92, 246, 0.96),
+      rgba(82, 46, 154, 0.96)
+    );
+  box-shadow:
+    0 11px 28px rgba(77, 39, 145, 0.34),
+    0 0 18px rgba(135, 88, 235, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.27),
+    inset 0 -1px 0 rgba(35, 15, 72, 0.35);
+  text-align: center;
+  text-shadow: 0 2px 7px rgba(16, 8, 30, 0.50);
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.35px;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn::before,
+.hero-buttons .btn::before,
+.hero-actions .btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 12px;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      110deg,
+      transparent 15%,
+      rgba(255, 255, 255, 0.11) 45%,
+      transparent 72%
+    );
+  opacity: 0.60;
+}
+
+.btn::after,
+.hero-buttons .btn::after,
+.hero-actions .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -65%;
+  width: 38%;
+  height: 100%;
+  pointer-events: none;
+  transform: skewX(-22deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.24),
+    transparent
+  );
+  transition: left 0.55s ease;
+}
+
+.btn:hover,
+.hero-buttons .btn:hover,
+.hero-actions .btn:hover {
+  transform: translateY(-3px);
+  border-color: rgba(218, 196, 255, 0.92);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(157, 112, 255, 0.98),
+      rgba(95, 51, 180, 0.98)
+    );
+  box-shadow:
+    0 15px 36px rgba(83, 42, 160, 0.45),
+    0 0 26px rgba(151, 102, 255, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.34);
+}
+
+.btn:hover::after,
+.hero-buttons .btn:hover::after,
+.hero-actions .btn:hover::after {
+  left: 128%;
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(190, 155, 255, 0.80);
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   PHẦN CHUNG
+========================================================= */
+
+.section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 82px 0;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: -260px;
+  left: 50%;
+  z-index: -1;
+  width: 520px;
+  height: 520px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(134, 83, 232, 0.11) 0%,
+    rgba(134, 83, 232, 0.038) 40%,
+    transparent 70%
+  );
+  filter: blur(8px);
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(700px, 78%);
+  height: 1px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(181, 140, 255, 0.44),
+    transparent
+  );
+  box-shadow: 0 0 16px rgba(126, 78, 221, 0.20);
+}
+
+.section-heading {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.section-heading span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--purple-light);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-shadow: 0 0 16px rgba(143, 94, 255, 0.18);
+}
+
+.section-heading h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  text-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.80),
+    0 0 20px rgba(137, 88, 235, 0.07);
+}
+
+.dark-section {
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(131, 78, 229, 0.075),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(177, 126, 255, 0.045),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #130d1d,
+      #0b0711 55%,
+      #160d20
+    );
+}
+
+/* =========================================================
+   DỊCH VỤ
+========================================================= */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.service-card,
+.customer-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(188, 153, 255, 0.16);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.065),
+      rgba(127, 77, 221, 0.022)
+    ),
+    rgba(18, 12, 27, 0.76);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.service-card::before,
+.customer-card::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -70px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(150, 102, 244, 0.13),
+    transparent 68%
+  );
+}
+
+.service-card {
+  padding: 30px 22px;
+  border-radius: 20px;
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow);
+}
+
+.service-icon {
+  margin-bottom: 15px;
+  font-size: 36px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  color: var(--silver-purple);
+  font-size: 21px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   CỔNG KHÁCH HÀNG
+========================================================= */
+
+.customer-section {
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(132, 81, 229, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(176, 124, 255, 0.04),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #0b0711,
+      #140c1e 50%,
+      #08060c
+    );
+}
+
+.search-box {
+  max-width: 650px;
+  margin: -8px auto 18px;
+  padding: 7px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.065),
+      rgba(126, 77, 220, 0.024)
+    ),
+    rgba(17, 11, 26, 0.80);
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.36),
+    0 0 26px rgba(117, 70, 210, 0.05);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  transition:
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.search-box:focus-within {
+  border-color: rgba(188, 151, 255, 0.72);
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.36),
+    0 0 0 4px rgba(126, 77, 220, 0.12);
+}
+
+.search-box input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 0;
+  outline: 0;
+  color: #ffffff;
+  background: transparent;
+  font-size: 13px;
+}
+
+.search-box input::placeholder {
+  color: #aea5c2;
+  font-size: 13px;
+}
+
+.customer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.customer-card {
+  padding: 14px;
+  border-radius: 15px;
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease,
+    background-color 0.24s ease;
+}
+
+.customer-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(188, 151, 255, 0.58);
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.30),
+    0 0 22px rgba(115, 68, 206, 0.08);
+}
+
+.customer-code {
+  margin-bottom: 5px;
+  color: var(--purple-light);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.customer-card h3 {
+  margin-bottom: 5px;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.customer-card p {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.customer-card a {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  color: var(--purple-light);
+  font-size: 10px;
+  font-weight: 800;
+  transition:
+    color 0.20s ease,
+    background 0.20s ease,
+    border-color 0.20s ease;
+}
+
+.customer-card a:hover {
+  border-color: var(--border-strong);
+  color: #ffffff;
+  background: rgba(137, 88, 235, 0.12);
+}
+
+.empty-message {
+  margin-top: 18px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 12px;
+}
+
+/* CARD CÓ THỂ CLICK */
+
+.customer-card-clickable {
+  position: relative;
+  cursor: pointer;
+}
+
+.customer-card-clickable::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(140, 89, 239, 0.07),
+    transparent 56%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.customer-card-clickable:hover::after {
+  opacity: 1;
+}
+
+.customer-card-clickable:focus-visible {
+  outline: 3px solid rgba(182, 143, 255, 0.74);
+  outline-offset: 4px;
+}
+
+.matched-songs {
+  margin-bottom: 16px;
+}
+
+.matched-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #e7e0f4;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.matched-song-title {
+  margin: 0 0 7px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.customer-name {
+  margin-top: 8px;
+}
+
+.customer-song-total {
+  margin-bottom: 18px;
+}
+
+.customer-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(171, 128, 255, 0.20);
+}
+
+.customer-open-text {
+  color: var(--purple-light);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.customer-card-arrow {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(183, 145, 255, 0.60);
+  border-radius: 50%;
+  color: var(--purple-light);
+  font-size: 22px;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.customer-card-clickable:hover .customer-card-arrow {
+  transform: translateX(4px);
+  color: #ffffff;
+  background: linear-gradient(180deg, #8f5cf6, #5d319e);
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.22);
+}
+
+/* =========================================================
+   TRANG RIÊNG KHÁCH HÀNG
+========================================================= */
+
+.customer-page {
+  min-height: 100vh;
+  background: var(--black);
+}
+
+.customer-hero {
+  position: relative;
+  min-height: 430px;
+  display: flex;
+  align-items: end;
+  padding: 130px 0 60px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 4, 11, 0.78),
+      rgba(7, 4, 11, 0.30),
+      rgba(7, 4, 11, 0.78)
+    ),
+    url("background.png") center center / cover no-repeat;
+}
+
+.customer-page-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(132, 81, 229, 0.08),
+      transparent 35%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(5, 3, 8, 0.12),
+      var(--black)
+    );
+}
+
+.customer-page-content {
+  position: relative;
+  z-index: 2;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--purple-light);
+  font-weight: 700;
+}
+
+.customer-profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.customer-profile img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 18px rgba(141, 90, 241, 0.24))
+    drop-shadow(0 0 34px rgba(87, 45, 155, 0.14));
+}
+
+.customer-page-code {
+  margin-bottom: 8px;
+  color: var(--purple-light);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.customer-profile h1 {
+  margin-bottom: 8px;
+  font-size: clamp(34px, 5vw, 58px);
+}
+
+.customer-profile p:last-child {
+  color: var(--muted);
+}
+
+.song-section {
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(132, 81, 229, 0.07),
+      transparent 34%
+    ),
+    var(--black);
+}
+
+.song-list {
+  display: grid;
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.song-card {
+  display: grid;
+  grid-template-columns: 68px 1fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--glass);
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.song-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(190, 155, 255, 0.66);
+  box-shadow: var(--shadow);
+}
+
+.song-number {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--purple-light);
+  font-weight: 800;
+  background: rgba(137, 88, 235, 0.08);
+}
+
+.song-info h3 {
+  margin-bottom: 6px;
+  color: var(--text);
+  font-size: 19px;
+}
+
+.song-info p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.song-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.song-listen,
+.song-download {
+  min-width: 105px;
+  padding: 13px 20px;
+  border-radius: 12px;
+  font: inherit;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    background 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.song-listen {
+  border: 1px solid rgba(187, 149, 255, 0.62);
+  color: var(--purple-light);
+  background: rgba(137, 88, 235, 0.08);
+}
+
+.song-listen:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  border-color: rgba(216, 193, 255, 0.88);
+  background: linear-gradient(180deg, #8f5cf6, #5c319f);
+  box-shadow: 0 10px 24px rgba(91, 49, 159, 0.30);
+}
+
+.song-download {
+  border: 1px solid rgba(207, 181, 255, 0.72);
+  color: #ffffff;
+  background: linear-gradient(180deg, #8f5cf6, #592f9b);
+  box-shadow:
+    0 10px 24px rgba(82, 43, 148, 0.30),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.song-download:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(180deg, #a06fff, #6738b4);
+  box-shadow:
+    0 13px 30px rgba(95, 51, 174, 0.38),
+    0 0 18px rgba(147, 95, 255, 0.12);
+}
+
+.song-player {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding-top: 16px;
+}
+
+.song-player audio {
+  display: block;
+  width: 100%;
+  height: 48px;
+}
+
+.song-player.hidden {
+  display: none;
+}
+
+.not-found {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 34px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  text-align: center;
+  background: var(--glass);
+}
+
+.not-found h2 {
+  margin-bottom: 12px;
+}
+
+.not-found p {
+  margin-bottom: 24px;
+  color: var(--muted);
+}
+
+/* =========================================================
+   CHÂN TRANG
+========================================================= */
+
+footer {
+  position: relative;
+  border-top: 1px solid rgba(177, 135, 255, 0.16);
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(129, 78, 225, 0.08),
+      transparent 48%
+    ),
+    linear-gradient(
+      180deg,
+      #0c0812,
+      #040306
+    );
+}
+
+.footer-content {
+  min-height: 112px;
+  padding: 18px 0 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.footer-content strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #eee9f7;
+  font-size: 16px;
+}
+
+.footer-content img {
+  order: 2;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(137, 88, 235, 0.18));
+}
+
+/* =========================================================
+   DÙNG CHUNG
+========================================================= */
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .main-nav {
+    display: none;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .customer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   ĐIỆN THOẠI
+========================================================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 24px, 1120px);
+  }
+
+  .topbar {
+    position: absolute;
+  }
+
+  .nav-wrap {
+    min-height: 66px;
+  }
+
+  .brand img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand span {
+    font-size: 15px;
+  }
+
+  .hero,
+  .hero-clean {
+    min-height: 100svh;
+    padding: 100px 0 60px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(6, 4, 10, 0.16),
+        rgba(6, 4, 10, 0.34),
+        rgba(6, 4, 10, 0.72)
+      ),
+      url("backgrounddt.png") center center / cover no-repeat;
+  }
+
+  .hero-content,
+  .hero-content-clean {
+    min-height: 82svh;
+    padding-bottom: 28px;
+  }
+
+  .hero-logo {
+    width: min(280px, 82vw);
+  }
+
+  .hero-kicker {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-actions,
+  .hero-buttons {
+    width: 100%;
+    max-width: 360px;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .hero-actions .btn,
+  .hero-buttons .btn,
+  .btn {
+    width: 100%;
+    min-width: 0;
+    max-width: 330px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .section::before {
+    top: -170px;
+    width: 340px;
+    height: 340px;
+  }
+
+  .section::after {
+    width: 82%;
+  }
+
+  .services-grid,
+  .customer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card,
+  .customer-card {
+    box-shadow:
+      0 14px 35px rgba(0, 0, 0, 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .customer-hero {
+    min-height: 390px;
+    padding: 105px 0 50px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(6, 4, 10, 0.18),
+        rgba(6, 4, 10, 0.46),
+        rgba(6, 4, 10, 0.90)
+      ),
+      url("backgrounddt.png") center center / cover no-repeat;
+  }
+
+  .customer-profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .customer-profile img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .song-card {
+    grid-template-columns: 54px 1fr;
+  }
+
+  .song-actions {
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .song-listen,
+  .song-download {
+    flex: 1;
+    min-width: 130px;
+  }
+
+  .song-player {
+    padding-top: 10px;
+  }
+
+  .customer-card-footer {
+    margin-top: 16px;
+  }
+
+  .customer-card-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  footer {
+    padding: 26px 0 16px;
+  }
+
+  .footer-content {
+    min-height: 96px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    padding: 15px 0 11px;
+    text-align: center;
+  }
+
+  .footer-content p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .footer-content strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 15px;
+  }
+
+  .footer-content img {
+    width: 30px;
+    height: 30px;
+    margin-top: 3px;
+    order: 2;
+  }
+
+  .footer-address {
+    display: block;
+    white-space: nowrap;
+    font-size: 11px;
+    letter-spacing: -0.15px;
+  }
+}
+
+/* =========================================================
+   ĐIỆN THOẠI NHỎ
+========================================================= */
+
+@media (max-width: 420px) {
+  .brand {
+    gap: 8px;
+  }
+
+  .brand img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand span {
+    font-size: 14px;
+  }
+
+  .hero,
+  .hero-clean {
+    padding-top: 82px;
+  }
+
+  .hero-content,
+  .hero-content-clean {
+    min-height: 84svh;
+    padding-bottom: 22px;
+  }
+
+  .hero-actions,
+  .hero-buttons {
+    padding: 11px;
+  }
+
+  .btn,
+  .hero-actions .btn,
+  .hero-buttons .btn {
+    min-height: 52px;
+    padding: 0 18px;
+    font-size: 15px;
+  }
+
+  .footer-content p {
+    font-size: 10.8px;
+  }
+}
+
+/* Tôn trọng cài đặt giảm chuyển động */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
