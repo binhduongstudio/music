@@ -132,9 +132,21 @@ input {
 }
 
 .brand span {
-  color: var(--purple-light);
   font-size: 18px;
-  text-shadow: 0 0 14px rgba(143, 94, 255, 0.20);
+  font-weight: 800;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #ddd0ff,
+    #b889ff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow: 0 0 10px rgba(140, 90, 255, 0.15);
 }
 
 .main-nav {
