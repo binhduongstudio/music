@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <!-- Nếu mở trang chủ từ Zalo/Facebook/Messenger/Instagram trên điện thoại,
+       tự chuyển sang trang hướng dẫn mở bằng trình duyệt. -->
+  <script>
+    (function () {
+      var ua = navigator.userAgent || '';
+      var isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
+      var isInApp = /Zalo|FBAN|FBAV|FB_IAB|Messenger|Instagram/i.test(ua);
+
+      if (isMobile && isInApp) {
+        window.location.replace('https://music.binhduongstudio.com/open.php');
+      }
+    })();
+  </script>
+
+  <title>Phòng thu Thủ Dầu Một | Bình Dương Studio</title>
+
+  <meta
+    name="description"
+    content="Phòng thu Thủ Dầu Một - Bình Dương Studio chuyên thu âm, hòa âm, phối khí, mixing và mastering tại Thủ Dầu Một, Bình Dương. Liên hệ 091 967 5367."
+  />
+
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://binhduongstudio.com/" />
+
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Phòng thu Thủ Dầu Một | Bình Dương Studio" />
+  <meta
+    property="og:description"
+    content="Thu âm, hòa âm, phối khí, mixing và mastering tại Thủ Dầu Một, Bình Dương."
+  />
+  <meta property="og:url" content="https://binhduongstudio.com/" />
+  <meta property="og:site_name" content="Bình Dương Studio" />
+  <meta property="og:image" content="https://binhduongstudio.com/logo.png" />
+  <meta property="og:image:alt" content="Logo Bình Dương Studio - Phòng thu Thủ Dầu Một" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://binhduongstudio.com/#website",
+        "url": "https://binhduongstudio.com/",
+        "name": "Bình Dương Studio",
+        "inLanguage": "vi-VN",
+        "publisher": { "@id": "https://binhduongstudio.com/#studio" }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://binhduongstudio.com/#studio",
+        "name": "Bình Dương Studio",
+        "alternateName": "Phòng thu Thủ Dầu Một",
+        "url": "https://binhduongstudio.com/",
+        "logo": "https://binhduongstudio.com/logo.png",
+        "image": "https://binhduongstudio.com/logo.png",
+        "telephone": "+84 919 675 367",
+        "description": "Phòng thu tại Thủ Dầu Một, Bình Dương chuyên thu âm, hòa âm, phối khí, mixing và mastering.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Thủ Dầu Một",
+          "addressRegion": "Bình Dương",
+          "addressCountry": "VN"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Thủ Dầu Một, Bình Dương"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+84 919 675 367",
+          "contactType": "customer service",
+          "availableLanguage": "Vietnamese"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Dịch vụ phòng thu tại Thủ Dầu Một",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Thu âm" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hòa âm và phối khí" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mix và Master" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sáng tác" } }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+
+  <style>
+    /* Đồng bộ tên thương hiệu ở góc trái */
+    .brand,
+    .brand span{
+      color:#ffffff !important;
+      -webkit-text-fill-color:#ffffff !important;
+      background:none !important;
+      font-family:"Manrope",sans-serif !important;
+      font-weight:800 !important;
+      text-shadow:none !important;
+    }
+
+    @media (max-width:768px){
+      #customerMainButton.customer-account-label{
+        flex-direction:row !important;
+        gap:6px !important;
+        white-space:nowrap !important;
+        font-size:16px !important;
+        line-height:1.1 !important;
+      }
+
+      #customerMainButton.customer-account-label .account-prefix{
+        display:inline !important;
+        font-size:16px !important;
+        font-style:italic;
+        font-weight:500;
+        text-transform:none;
+        opacity:.9;
+      }
+
+      #customerMainButton.customer-account-label .account-name{
+        display:inline !important;
+        font-size:16px !important;
+        font-style:normal;
+        font-weight:800;
+        white-space:nowrap;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">
+        <img src="logo.png" alt="Bình Dương Studio" />
+        <span>BÌNH DƯƠNG STUDIO</span>
+      </a>
+
+      <button class="external-browser-button" type="button" aria-label="Mở trang bằng trình duyệt">↗ MỞ TRÌNH DUYỆT</button>
+
+      <nav class="main-nav">
+        <a class="active" href="index.html">Trang chủ</a>
+        <a href="shop.html">Shop</a>
+        <a href="musicdemo.html">Demo khách</a>
+        <a id="customerMenuLink" href="https://music.binhduongstudio.com/guest.php">Đăng nhập</a>
+        <a href="tel:0919675367">Liên hệ</a>
+      </nav>
+      
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-clean" id="home">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content hero-content-clean">
+        <div class="hero-actions">
+          <a class="btn btn-music" href="musicdemo.html">
+            DEMO KHÁCH
+          </a>
+
+          <a id="customerMainButton" class="btn btn-secondary" href="https://music.binhduongstudio.com/guest.php">
+            ĐĂNG NHẬP
+          </a>
+
+          <a class="btn btn-primary" href="shop.html">
+            SHOP
+          </a>
+
+          <a class="btn btn-outline" href="tel:0919675367">
+            LIÊN HỆ STUDIO
+          </a>
+        </div>
+      </div>
+    </section>
+
+<section class="section dark-section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span>DỊCH VỤ</span>
+          <h2>Dịch vụ phòng thu tại Thủ Dầu Một</h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">🎤</div>
+            <h3>Thu âm</h3>
+            <p>Thu vocal rõ nét, tự nhiên và phù hợp với chất giọng.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🎹</div>
+            <h3>Hòa âm</h3>
+            <p>Phối khí phù hợp với phong cách và cảm xúc của ca khúc.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🎚️</div>
+            <h3>Mix & Master</h3>
+            <p>Hoàn thiện sản phẩm âm thanh rõ ràng và chuyên nghiệp.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🎼</div>
+            <h3>Sáng tác</h3>
+            <p>Hỗ trợ phát triển và hoàn thiện ý tưởng âm nhạc.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-content">
+      <img src="logo.png" alt="Bình Dương Studio" />
+
+      <p>
+        <strong>BÌNH DƯƠNG STUDIO</strong><br />
+        Thủ Dầu Một - Bình Dương<br />
+        Điện thoại: 091 967 5367
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (async function () {
+      const menuLink = document.getElementById('customerMenuLink');
+      const mainButton = document.getElementById('customerMainButton');
+      try {
+        const response = await fetch('https://music.binhduongstudio.com/customer.php?auth_status=1', {
+          credentials: 'include',
+          cache: 'no-store'
+        });
+        if (!response.ok) return;
+        const status = await response.json();
+        if (!status.loggedIn || !status.name) return;
+        const showAccountLabel = function (element) {
+          const prefix = document.createElement('span');
+          const name = document.createElement('span');
+          prefix.className = 'account-prefix';
+          name.className = 'account-name';
+          prefix.textContent = 'Nhạc của';
+          name.textContent = status.name;
+          element.classList.add('customer-account-label');
+          element.replaceChildren(prefix, name);
+        };
+        showAccountLabel(menuLink);
+        showAccountLabel(mainButton);
+        menuLink.href = status.url;
+        mainButton.href = status.url;
+      } catch (error) {}
+    }());
+
+    document.querySelector('.external-browser-button')?.addEventListener('click', async function () {
+      const url = window.location.href;
+      const ua = navigator.userAgent || '';
+      if (/Android/i.test(ua)) {
+        window.location.href = 'intent://' + url.replace(/^https?:\/\//i, '') + '#Intent;scheme=https;package=com.android.chrome;end';
+        return;
+      }
+      if (/iPhone|iPad|iPod/i.test(ua)) {
+        try { await navigator.clipboard.writeText(url); } catch (error) {}
+        alert('Đã sao chép đường dẫn. Quý khách chọn menu của Zalo → Mở bằng Safari, hoặc dán đường dẫn vào Safari.');
+        return;
+      }
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
+  </script>
+
+</body>
+</html>
